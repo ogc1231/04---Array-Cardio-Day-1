@@ -163,7 +163,18 @@
         "van",
         "car",
         "truck",
+        "dog",
       ];
+
+      const numberOfEach = data.reduce(function (obj, item) {
+        if (!obj[item]) {
+          obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+      }, {});
+
+      console.table(numberOfEach);
     </script>
   </body>
 </html>
